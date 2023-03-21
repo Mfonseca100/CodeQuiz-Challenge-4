@@ -146,10 +146,19 @@ submitBtn.addEventListener('click', (event) => {
         if (currentQuiz < quizData.length) {
             loadQuiz();
         } else {
-            clearInterval(timerInterval);
+            endQuiz();
+            displayScoreAndInitials();
+        }
+    }
+});
+            function displayScoreAndInitials() {
             quiz.innerHTML = `
             <h2>✨You answered ${score}/${quizData.length} questions correctly!✨</h2>
-
+            <form id="score-form">
+            <label for="initials">Enter your initials:</label>
+            <input type="text" id="initials" name="initials" maxlength="3" required>
+            <button type="submit">Save score</button>
+            </form>
             <button onclick="location.reload()">Reload</button>
         `;
             const scoreForm = document.querySelector('#score-form');
@@ -165,8 +174,8 @@ submitBtn.addEventListener('click', (event) => {
             });
         
     }
-    }
-});
+    
+
 
 
 
