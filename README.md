@@ -22,4 +22,8 @@ WHEN the game is over
 THEN I can save my initials and score
 ```
 
-testing
+## URL of deployed site 
+>https://mfonseca100.github.io/CodeQuiz-Challenge-4/
+## Screenshot of Mock-Up with Welcome Pge and First Question
+![ScreenshotofWelcomepg](./assets/images/127.0.0.1_5502_CodeQuiz-Challenge-4_index.html.png)
+![ScreenshotofMockup](./assets/images/127.0.0.1_5502_CodeQuiz-Challenge-4_index.html%20(1).png)
