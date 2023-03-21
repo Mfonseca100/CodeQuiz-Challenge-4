@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--css linked-->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +10,18 @@
 </head>
 
 <body>
+    <!--welcome page-->
     <div class="welcome"> 
         <h1>Welcome!</h1>
         <p>Press Start to begin the Quiz!</p>
         <button id="start">Start</button>
     </div>
+    <!--timer-->
     <div id="timer">Time Remaining: 60 seconds</div>
     <div class="quiz-container" id="quiz" hidden="true">
         <form id="quiz-header">
             <h2 id="question">Code Quiz</h2>
+            <!--list of question-->
             <ul>
                 <li>
                     <input type="radio" name="answer" id="a" class="answer">
@@ -41,10 +44,12 @@
                 </li>
             </ul>
         </form>
+        <!--submit button-->
         <button id="submit">Submit</button>
         <div id = "initials-form" hidden></div>
-   
+
     </div>
+    <!--js linked-->
     <script src ="./assets/script.js"></script>
 </body>
 

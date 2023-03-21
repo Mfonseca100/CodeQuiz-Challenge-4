@@ -1,4 +1,4 @@
-//quizdata with questions, answer options and correct answer
+//quizdata with questions, answers and correct answer as an array
 
 const quizData = [
     {
@@ -57,7 +57,7 @@ const questionForm = document.querySelector('#quiz-header')
 let currentQuiz = 0
 let score = 0
 
-
+// timer on 60 sec 
 function startQuiz() {
     let initTime = 60000;
     remainingTime = initTime;
@@ -69,7 +69,7 @@ function startQuiz() {
 
     loadQuiz()
 }
-
+//declaring remainingTime and timerInterval
 let remainingTime = 60000;
 let timerInterval;
 
@@ -98,12 +98,12 @@ function endQuiz() {
 }
 
 function loadQuiz() {
-
+//clears any previous selected answer choices 
     deselectAnswer()
 
     const currentQuizData = quizData[currentQuiz];
     questionEl.innerText = currentQuizData.question;
-
+//preparing the next question to be displayed 
     answerEls[0].nextElementSibling.innerText = currentQuizData.answer[0];
     answerEls[1].nextElementSibling.innerText = currentQuizData.answer[1];
     answerEls[2].nextElementSibling.innerText = currentQuizData.answer[2];
@@ -123,7 +123,7 @@ function getSelected() {
     });
     return selectAnswer;
 }
-
+//listens for click event on the start button, calls startQuiz function when clicked 
 const submitBtn = document.querySelector('#submit');
 
 startBtn.addEventListener('click', (event) => {
@@ -132,7 +132,8 @@ startBtn.addEventListener('click', (event) => {
     startQuiz()
 }
 )
-
+//function to get selected answer, confirms true or false, updates score and rem time
+//loads next question
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
     const answer = getSelected();
@@ -151,6 +152,8 @@ submitBtn.addEventListener('click', (event) => {
         }
     }
 });
+//displays the score and initial form and listens for the submit event
+//saves the score with initials 
             function displayScoreAndInitials() {
             quiz.innerHTML = `
             <h2>✨You answered ${score}/${quizData.length} questions correctly!✨</h2>
