@@ -173,6 +173,8 @@ submitBtn.addEventListener('click', (event) => {
                 scoreDisplay.setAttribute('id', 'score-display');
                 scoreDisplay.innerHTML = `Your score (${score}/${quizData.length}) has been saved with your initials ${initials}`;
                 quiz.appendChild(scoreDisplay);
+
+                console.log(`Initials: ${initials}, Score: ${score}/${quizData.length}`);
                 scoreForm.reset();
             });
         
